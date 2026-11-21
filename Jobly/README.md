@@ -73,7 +73,7 @@ flowchart LR
 ### 1. Start JoblyBackend (and optional Local LLM)
 
 ```powershell
-cd C:\Users\Student\AndroidStudioProjects\JoblyBackend
+cd JoblyBackend
 python -m venv .venv
 .\.venv\Scripts\pip.exe install -r requirements.txt
 Copy-Item .env.example .env
@@ -90,7 +90,7 @@ Copy-Item .env.example .env
 - **Physical Device:** `http://127.0.0.1:8000` (pair with `adb reverse tcp:8000 tcp:8000`)
 
 ```powershell
-cd C:\Users\Student\AndroidStudioProjects\Jobly
+cd Jobly
 .\gradlew.bat assembleDebug
 adb install -r app\build\outputs\apk\debug\app-debug.apk
 adb shell am start -n com.example.jobly/.MainActivity
@@ -133,11 +133,11 @@ app/src/main/java/com/example/jobly/
 
 ```powershell
 # Backend unit + HTTP E2E tests (64 tests)
-cd C:\Users\Student\AndroidStudioProjects\JoblyBackend
+cd JoblyBackend
 .\.venv\Scripts\pytest.exe -v
 
 # Android JVM unit tests (23 tests)
-cd C:\Users\Student\AndroidStudioProjects\Jobly
+cd Jobly
 .\gradlew.bat testDebugUnitTest
 
 # Android instrumented Compose UI & live E2E tests (6 tests, requires emulator + backend running)

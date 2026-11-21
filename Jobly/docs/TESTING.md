@@ -19,7 +19,7 @@ Both **Jobly** (Android) and **JoblyBackend** (FastAPI) include specification-dr
 Run all backend tests (uses isolated `tmp_path` SQLite DB and storage directories via `tests/conftest.py`):
 
 ```powershell
-cd C:\Users\Student\AndroidStudioProjects\JoblyBackend
+cd JoblyBackend
 .\.venv\Scripts\pytest.exe -v
 ```
 
@@ -40,7 +40,7 @@ cd C:\Users\Student\AndroidStudioProjects\JoblyBackend
 Run fast local JVM tests without an emulator:
 
 ```powershell
-cd C:\Users\Student\AndroidStudioProjects\Jobly
+cd Jobly
 .\gradlew.bat testDebugUnitTest
 ```
 
@@ -66,7 +66,7 @@ Per-file XML results are written to `app/build/test-results/testDebugUnitTest/`.
 ### Command
 
 ```powershell
-cd C:\Users\Student\AndroidStudioProjects\Jobly
+cd Jobly
 .\gradlew.bat connectedDebugAndroidTest
 ```
 

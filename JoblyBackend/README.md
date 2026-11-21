@@ -24,7 +24,7 @@ FastAPI + Async SQLAlchemy backend powering the **Jobly** Android app.
 ## Local Setup (Windows / Python)
 
 ```powershell
-cd C:\Users\Student\AndroidStudioProjects\JoblyBackend
+cd JoblyBackend
 python -m venv .venv
 .\.venv\Scripts\pip.exe install -r requirements.txt
 Copy-Item .env.example .env
@@ -88,7 +88,7 @@ Initialized automatically via `init_db` in `app/models.py`:
 Runs **64** unit, black-box specification, search engine, scraper, notification, PDF, and HTTP E2E tests:
 
 ```powershell
-cd C:\Users\Student\AndroidStudioProjects\JoblyBackend
+cd JoblyBackend
 .\.venv\Scripts\pytest.exe -v
 ```
 
