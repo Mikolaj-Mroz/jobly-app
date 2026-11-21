@@ -1,0 +1,47 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: jobly
+      POSTGRES_PASSWORD: jobly
+      POSTGRES_DB: jobly
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jobly -d jobly"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+asyncpg://jobly:jobly@db:5432/jobly
+      LLM_BASE_URL: http://host.docker.internal:1234/v1
+      LLM_API_KEY: lm-studio
+      LLM_TIMEOUT_SECONDS: "120"
+      STORAGE_DIR: /app/storage
+      ENABLE_SCHEDULER: "true"
+      SCRAPE_INTERVAL_MINUTES: "60"
+      SCRAPE_ON_STARTUP: "false"
+      ENABLE_DAILY_NOTIFICATION: "true"
+      DAILY_NOTIFICATION_INTERVAL_HOURS: "24"
+      JUSTJOIN_ITEMS_PER_PAGE: "50"
+      JUSTJOIN_MAX_PAGES: "2"
+      MAX_CV_FILE_SIZE_BYTES: "5242880"
+      MAX_CV_PAGES: "10"
+      MAX_CVS_PER_USER: "10"
+    ports:
+      - "8000:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./storage:/app/storage
+
+volumes:
+  pgdata:

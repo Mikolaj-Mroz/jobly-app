@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.Jobly" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorBackground">@color/canvas_gray</item>
+        <item name="android:statusBarColor">@color/surface_white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/surface_white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

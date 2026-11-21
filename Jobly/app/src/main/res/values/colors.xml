@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Surfaces -->
+    <color name="surface_white">#FFFFFFFF</color>
+    <color name="canvas_gray">#FFF0F0F0</color>
+    <color name="card_surface">#FFF9F9F9</color>
+    <color name="chat_box_bg">#FFDBDBDB</color>
+    <color name="topbar_divider">#FFC9C9C9</color>
+    <color name="drawer_surface">#FFF7F2FA</color>
+    <color name="drawer_scrollbar">#FF79747E</color>
+
+    <!-- Text & Material 3 Tokens -->
+    <color name="on_surface">#FF1D1B20</color>
+    <color name="on_surface_variant">#FF49454F</color>
+    <color name="on_primary_container">#FF4F378A</color>
+    <color name="secondary_container">#FFE8DEF8</color>
+    <color name="on_secondary_container">#FF4A4459</color>
+    <color name="outline">#FF79747E</color>
+    <color name="outline_variant">#FFCAC4D0</color>
+    <color name="badge_error">#FFB3261E</color>
+
+    <!-- Jobly Brand & Accents -->
+    <color name="salary_green">#FF4BC54B</color>
+    <color name="accent_yellow">#FFFFCC00</color>
+    <color name="accent_yellow_alt">#FFFFE137</color>
+    <color name="accent_blue">#FF8BA9D5</color>
+    <color name="accent_pink">#FFE96F91</color>
+    <color name="accent_green">#FF8FD591</color>
+
+    <!-- Chip Gradients -->
+    <color name="chip_yellow_start">#FFFFCF70</color>
+    <color name="chip_yellow_end">#FFE68649</color>
+    <color name="chip_blue_start">#FF7CCAF9</color>
+    <color name="chip_blue_end">#FF4790DE</color>
+    <color name="chip_pink_start">#FFFA84B8</color>
+    <color name="chip_pink_end">#FFE24A8A</color>
+    <color name="chip_green_start">#FFB2E876</color>
+    <color name="chip_green_end">#FF79C450</color>
+</resources>
